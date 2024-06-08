@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Login con Node + JWT</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+    <main class="form-signin text-center shadow-lg p-3 mb-6 border-radius">
+        <form  id="formLogin" action="/login" method="POST">
+            <img class="mb-4" src="img/smartphone-mobile-phone-svgrepo-com.svg" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">Ingresar</h1>
+      
+            <label for="user" class="sr-only">User</label>
+            <input id="user" type="text" id="user" class="form-control" placeholder="User" required autofocus>
+      
+      
+            <label for="pass" class="sr-only">Password</label>
+            <input type="password" id="pass" class="form-control" placeholder="Password" required>
+      
+      
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+            <a type="button" class="mt-2 w-100 btn btn-lg btn-bd-primary" href="">Registrarse</a>
+        
+            <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+          </form>
+    </main>
+
+  </body>
+</html>

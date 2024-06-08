@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Register con Node + JWT</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+      body {
+        background-color: #f8f9fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .form-register {
+        max-width: 400px;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: #ffffff;
+      }
+      .form-register .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+      .form-register .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+      }
+      .form-register .form-control {
+        border-radius: 0.25rem;
+      }
+      .form-register .card-footer {
+        display: flex;
+        justify-content: space-between;
+      }
+      .form-register h1 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+
+  <body class="text-center">
+    <main class="form-register text-center shadow-lg p-4 mb-5 bg-white rounded">
+        <h1 class="h3 mb-3 font-weight-normal">Registrarse</h1>
+        <form id="formRegister" action="/register" method="POST">
+            <div class="form-group mb-3">
+                <label for="name" class="form-label">Nombre Completo</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Ingrese su nombre completo" required>
+            </div>
+            <div class="form-group mb-3">
+                <label for="user" class="form-label">Cuenta de usuario</label>
+                <input type="text" id="user" name="user" class="form-control" placeholder="Ingrese su cuenta de usuario" required>
+            </div>
+            <div class="form-group mb-3">
+                <label for="pass" class="form-label">Contraseña</label>
+                <input type="password" id="pass" name="pass" class="form-control" placeholder="Ingrese su contraseña" required>
+            </div>
+            <div class="card-footer bg-transparent border-primary">
+                <a href="/" type="button" class="btn btn-secondary">Cancelar</a>
+                <button type="submit" class="btn btn-primary">Registrar</button>
+            </div>
+        </form>
+    </main>
+  </body>
+</html>
