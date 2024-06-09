@@ -24,19 +24,35 @@
             <h1 class="h3 mb-3 font-weight-normal">Ingresar</h1>
       
             <label for="user" class="sr-only">User</label>
-            <input id="user" type="text" id="user" class="form-control" placeholder="User" required autofocus>
+            <input id="user" name="user" type="text" class="form-control" placeholder="User" required autofocus>
       
       
             <label for="pass" class="sr-only">Password</label>
-            <input type="password" id="pass" class="form-control" placeholder="Password" required>
+            <input type="password" id="pass" name="pass" class="form-control" placeholder="Password" required>
       
       
             <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-            <a type="button" class="mt-2 w-100 btn btn-lg btn-bd-primary" href="">Registrarse</a>
+            <a type="button" class="mt-2 w-100 btn btn-lg btn-bd-primary" href="/register">Registrarse</a>
         
             <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
           </form>
     </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <% if(alert) { %>
+      <script>
+        Swal.fire({
+          title: '<%= alertTitle %>',
+          text: '<%= alertMessage %>',
+          icon: '<%= alertIcon %>',
+          showConfirmButton: <%= showConfirmButton %>,
+          timer: <%= timer %>,
+        }).then(() => {
+          window.location = '/<%= ruta %> '
+        })
+      </script>
+   <% } %>
 
   </body>
 </html>

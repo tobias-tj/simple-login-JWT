@@ -18,11 +18,18 @@ app.use(express.json())
 dotenv.config({path: './env/.env'})
 
 // para poder trabajar con las cookies
-// app.use(cookieParser)
+app.use(cookieParser())
 
 // app.get('/', (req, res) =>{
 //     res.render('index')
 // })
+
+// Para eliminar el cache y que no se pueda volver con el boton de back luego de que hacemos un LOGOUT
+app.use(function(req, res, next){
+    if(!req.user)
+        res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate')
+    next();
+})
 
 // llamar al router
 app.use('/', require('./routes/router'))
